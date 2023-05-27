@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.251">
+<meta name="generator" content="quarto-1.3.353">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -17,7 +17,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../chapters/sec1/sec-intro.html" rel="next">
+<link href="../chapters/sec1/1-0-sec-intro.html" rel="next">
 <link href="../index.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -69,19 +69,28 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-BTSMMRMH08', { 'anonymize_ip': true});
 </script>
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 </head>
 
 <body class="nav-sidebar floating">
 
+
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Introduction</h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/intro.html">Introduction</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
       </button>
     </div>
   </nav>
@@ -89,158 +98,228 @@ gtag('config', 'G-BTSMMRMH08', { 'anonymize_ip': true});
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="../">DevOps for Data Science</a> 
         <div class="sidebar-tools-main">
-    <a href="https://github.com/akgold/do4ds" title="Source Code" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
-    <a href="" title="Share" id="sidebar-tool-dropdown-0" class="sidebar-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-share"></i></a>
-    <ul class="dropdown-menu" aria-labelledby="sidebar-tool-dropdown-0">
-        <li>
-          <a class="dropdown-item sidebar-tools-main-item" href="https://twitter.com/intent/tweet?url=|url|">
-            <i class="bi bi-bi-twitter pe-1"></i>
-          Twitter
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item sidebar-tools-main-item" href="https://www.facebook.com/sharer/sharer.php?u=|url|">
-            <i class="bi bi-bi-facebook pe-1"></i>
-          Facebook
-          </a>
-        </li>
-    </ul>
+    <a href="https://github.com/akgold/do4ds" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <div class="dropdown">
+      <a href="" title="Share" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Share"><i class="bi bi-share"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://twitter.com/intent/tweet?url=|url|">
+              <i class="bi bi-bi-twitter pe-1"></i>
+            Twitter
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://www.facebook.com/sharer/sharer.php?u=|url|">
+              <i class="bi bi-bi-facebook pe-1"></i>
+            Facebook
+            </a>
+          </li>
+      </ul>
+    </div>
 </div>
     </div>
       </div>
-      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
         </div>
-      </div>
+        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link">Welcome!</a>
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Welcome!</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/intro.html" class="sidebar-item-text sidebar-link active">Introduction</a>
+  <a href="../chapters/intro.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Introduction</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../chapters/sec1/sec-intro.html" class="sidebar-item-text sidebar-link">DevOps Lessons for Data Science</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a href="../chapters/sec1/1-0-sec-intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">DevOps Lessons for Data Science</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/sec1/code-promotion.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Code promotion and integration</span></a>
+  <a href="../chapters/sec1/1-1-code-promotion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Code promotion and integration</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/sec1/env-as-code.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Environments as Code</span></a>
+  <a href="../chapters/sec1/1-2-env-as-code.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Environments as Code</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/sec1/proj-components.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data Science Project Components</span></a>
+  <a href="../chapters/sec1/1-3-data-arch.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data Pipeline Architecture</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/sec1/monitor-log.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Logging and Monitoring</span></a>
+  <a href="../chapters/sec1/1-4-apis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Designing Your Application Layers</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/sec1/docker.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Docker for Data Science</span></a>
+  <a href="../chapters/sec1/1-5-monitor-log.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Logging and Monitoring</span></span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../chapters/sec2/sec-intro.html" class="sidebar-item-text sidebar-link">DevOps for DevOps</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <a href="../chapters/sec2/2-0-sec-intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">IT/Admin Tools</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/sec2/cloud.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Getting Started with the Cloud</span></a>
+  <a href="../chapters/sec2/2-1-terminal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">The Terminal</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/sec2/cmd-line.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">The Command Line + SSH</span></a>
+  <a href="../chapters/sec2/2-2-ssh.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Connecting Securely with SSH</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/sec2/linux-admin.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Administering a Linux Server</span></a>
+  <a href="../chapters/sec2/2-3-cmd-line.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Getting comfortable on the Command Line</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/sec2/understanding-traffic.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Computer Networks and the Internet</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chapters/sec2/servers.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Computers, Computing, and Servers</span></a>
+  <a href="../chapters/sec2/2-4-docker.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Demystifying Docker</span></span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../chapters/sec3/sec-intro.html" class="sidebar-item-text sidebar-link">Working with IT</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <a href="../chapters/sec3/3-0-sec-intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">IT/Admin for Data Science</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/sec3/env-promote.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">DevOps for DevOps</span></a>
+  <a href="../chapters/sec3/3-1-cloud.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Getting Started with the Cloud</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/sec3/offline.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Offline</span></a>
+  <a href="../chapters/sec3/3-2-linux-admin.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Basic Linux SysAdmin</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/sec3/auth.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Logging in with auth</span></a>
+  <a href="../chapters/sec3/3-3-networking.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Intro to Computer Networks</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/sec3/scaling.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Scaling</span></a>
+  <a href="../chapters/sec3/3-4-dns.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">DNS allows for human-readable addresses</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/sec3/3-5-ssl.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">You should use SSL/HTTPS</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/sec3/3-6-servers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Choosing the right server for you</span></span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">Appendices</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+            <a href="../chapters/sec4/4-0-sec-intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Making it Enterprise-Grade</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/append/docker-cheatsheet.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Docker Cheatsheet</span></a>
+  <a href="../chapters/sec4/4-1-os-ds-in-ent.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Open Source Data Science in the Enterprise</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/sec4/4-2-ent-networks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Enterprise Networking</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/sec4/4-3-auth.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Auth in Enterprise</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/sec4/4-4-ent-servers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Enterprise Server Management</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/append/auth.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Auth Technologies</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/append/lab-map.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Lab Map</span></span></a>
   </div>
 </li>
       </ul>
@@ -248,15 +327,20 @@ gtag('config', 'G-BTSMMRMH08', { 'anonymize_ip': true});
     </ul>
     </div>
 </nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#a-short-history-of-devops" id="toc-a-short-history-of-devops" class="nav-link active" data-scroll-target="#a-short-history-of-devops">A short history of DevOps</a></li>
-  <li><a href="#those-who-do-devops" id="toc-those-who-do-devops" class="nav-link" data-scroll-target="#those-who-do-devops">Those who do DevOps</a></li>
-  <li><a href="#whats-in-this-book" id="toc-whats-in-this-book" class="nav-link" data-scroll-target="#whats-in-this-book">What’s in this book?</a></li>
+  <li><a href="#devops-for-agile-software" id="toc-devops-for-agile-software" class="nav-link active" data-scroll-target="#devops-for-agile-software">DevOps for Agile Software</a></li>
+  <li><a href="#processes-and-people" id="toc-processes-and-people" class="nav-link" data-scroll-target="#processes-and-people">Processes and People</a></li>
+  <li><a href="#about-this-book" id="toc-about-this-book" class="nav-link" data-scroll-target="#about-this-book">About this book</a>
+  <ul class="collapse">
+  <li><a href="#comprehension-questions" id="toc-comprehension-questions" class="nav-link" data-scroll-target="#comprehension-questions">Comprehension Questions</a></li>
+  <li><a href="#labs" id="toc-labs" class="nav-link" data-scroll-target="#labs">Labs</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/akgold/do4ds/edit/main/chapters/intro.qmd" class="toc-action">Edit this page</a></p></div></div></nav>
     </div>
@@ -265,7 +349,7 @@ gtag('config', 'G-BTSMMRMH08', { 'anonymize_ip': true});
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Introduction</h1>
+<h1 class="title">Introduction</h1>
 </div>
 
 
@@ -273,129 +357,162 @@ gtag('config', 'G-BTSMMRMH08', { 'anonymize_ip': true});
 <div class="quarto-title-meta">
 
     
+  
     
   </div>
   
 
 </header>
 
-<p>Data science itself is pretty useless.</p>
-<p>It’s likely you became a data scientist because you love creating beautiful charts, minimizing model prediction error, or writing elegant code in R or Python.</p>
-<p>Ultimately – and perhaps frustratingly – these things don’t matter. What matters is whether the output of your work is useful in affecting decisions at your organization or in the broader world.</p>
-<p>That means, you’re going to have to share your work by putting it <em>in production</em>. Many data scientists think of <em>in production</em> as some mythical state of super computers running ultra-complex machine learning models running over dozens of shards of data, terrabytes each.</p>
-<p>It definitely occurs on a misty mountaintop, and does not involve the google sheets, csv files, or half-baked database queries you probably wrangle every day.</p>
+<p>Data science is pretty useless.</p>
+<p>Maybe you started writing R or Python code because you love creating beautiful visualizations. Or maybe you are passionate about ecology or biostatistics or economics. Maybe you just like writing elegant code in R or Python.</p>
+<p>Ultimately – frustratingly – these things <em>don’t matter</em>.</p>
+<p>What matters is whether the output of your work is useful in affecting decisions at your organization or in the broader world.</p>
+<p>That means you’re going to have to share your work by putting it <em>in production</em>.</p>
+<p>Many data scientists think of <em>in production</em> as some mythical state of super computers running state-of-the-art machine learning models running over dozens of shards of data, terrabytes each. It definitely occurs on a misty mountaintop, and does not involve the google sheets, csv files, or half-baked database queries you probably wrangle every day.</p>
 <p>But that’s wrong. If you’re a data scientist and you’re trying to put your work in front of someone else’s eyes, you’re <em>in production</em>. And if you’re <em>in production</em>, this book is for you.</p>
-<p>You may sensibly be asking who I am to make such a proclimation.</p>
-<p>As of this writing, I’ve been on the Solutions Engineering team at RStudio (soon to be Posit) for nearly four years. The Solutions Engineering team at RStudio helps users of our open source and professional tools understand how to deploy, install, configure, and use RStudio’s Professional Products.</p>
-<p>As such, I’ve spoken with hundreds of organizations managing data science <em>in production</em> about what being <em>in production</em> means for them, and how to make their production systems for developing and sharing data science products more robust – both with RStudio’s Professional Products and using purely open source tooling.</p>
-<p>For some orgaizations, <em>in production</em> means a report that will get emailed around at the end of each week. For others, it will mean hosting a live app or dashboard that people visit. For others, it means serving live predictions to another service from a machine learning model.</p>
-<p>Regardless of the actual character of the data science products, organizations are universally concerned with making these assets reliable, reproducible, and performant (enough).</p>
-<p>At RStudio, the Solutions Engineering team is most directly responsible for engaging with the IT/Admin organizations at our customers. So that’s what this book is about – all of the stuff that is <em>not data science</em> that it takes to deploy a data science asset into production.</p>
-<section id="a-short-history-of-devops" class="level2">
-<h2 class="anchored" data-anchor-id="a-short-history-of-devops">A short history of DevOps</h2>
-<p>Here’s the one sentence definition: DevOps is a set of cultural norms, practices, and supporting tooling to help make the process of developing and deploying software smoother and lower risk.</p>
-<p>If you feel like that definition is pretty vague and unhelpful, you’re right. Like Agile software development, to which it is closely related, DevOps is a squishy concept. That’s partially because DevOps isn’t just one thing – it’s the application of some principles and process ideas to whatever context you’re actually working in. That malleability is one of the great strenths of DevOps, but also makes the concept quite squishy.</p>
-<p>This squishiness is furthered by the ecosystem of companies enabling DevOps. There are dozens and dozens of companies prostelytizing their own particular flavor of DevOps – one that (curiously) reflects the capabilities of whatever product they’re selling.</p>
+<p>You may sensibly be asking who I am to make such a proclamation.</p>
+<p>In 2019, I left a role leading a data science team to join the Solutions Engineering team at Posit (then RStudio). The Solutions Engineering team helps our customers deploy, install, configure, and use Posit’s Professional Products.</p>
+<p>As such, I’ve spoken with hundreds of organizations managing data science in production about what being in production means for them. And I’ve helped them to make their systems for developing and sharing data science products more robust with both open source tooling and Posit’s Professional Products.</p>
+<p>I’ve seen organizations at every level of data science maturity. For some organizations, in production means a report that gets rendered and emailed around. For others, it means hosting a live app or dashboard that people come visit. For others, it means serving live predictions to another service from a machine learning model via an API.</p>
+<p>Regardless of the maturity or the form, every organization wants to know that the work is reliable, the environment is safe, and that it’ll be available when people need it.</p>
+<p>And so that’s what this book is about – all of the stuff that is <em>not data science</em> that it takes to deploy a data science product into production.</p>
+<p>The good news is that there’s existing prior art here. <em>DevOps</em> is an outgrowth of software engineering that is primarily concerned with these problems and where we, as data scientists, can take some important cues.</p>
+<section id="devops-for-agile-software" class="level2">
+<h2 class="anchored" data-anchor-id="devops-for-agile-software">DevOps for Agile Software</h2>
+<p>DevOps is a set of cultural norms, practices, and supporting tooling to help make the process of developing and deploying software smoother and lower risk.</p>
+<p>If you feel like that definition is pretty vague and unhelpful, you’re right.</p>
+<p>Like Agile software development, to which it is closely related, DevOps is a squishy concept. That’s partially because DevOps isn’t just one thing – it’s the application of some principles and process ideas to whatever context you’re actually working in. That malleability is one of the great strengths of DevOps, but can also make it difficult to pin down.</p>
+<p>This squishiness is furthered by the ecosystem of companies enabling DevOps. There are dozens and dozens of companies proselytizing their own particular flavor of DevOps – one that (shocker) reflects the capabilities of whatever product they’re selling.</p>
 <p>But underneath the industry hype and the marketing jargon, there are some extremely valuable lessons to take from the field.</p>
-<p>To understand better, let’s go back to the birth of the field.</p>
-<p>The <a href="https://agilemanifesto.org/"><em>Manifesto for Agile Software Development</em></a> was originally published in 2001. Throughout the 1990s, software developers had begun observing that delivering software in small units, quickly collecting feedback, and iterating was an effective model. After that point, many different frameworks of actual working patterns were developed and popularized.</p>
-<p>However, many of these frameworks were really focused on <em>software development</em>. What happened once the software was written?</p>
-<p>Historically, IT Administrators managed the servers, networking, and workstations needed to deploy, release, and operate that software. So, when an application was complete (or perceived as such), it was hurled over the wall from Development to Operations. They’d figure out the hardware and networking requirements, check that it was performant enough, and get it going in the real world.</p>
-<p>Needless to say, this pattern is very fragile and subject to many errors and it quickly became apparent that the Agile process of creating and getting feedback on small iterative changes to working software needed a complementary process to get that software deployed and into production.</p>
-<p>DevOps arose as this discipline – a way for software developers and the administrators of operational software to better collaborate on making sure the software being written was making it reliably and quickly into production. It took a little while for the field to be formalized, and the term DevOps came into common usage around 2010.</p>
+<p>To understand better, let’s go back to the birth DevOps.</p>
+<p>As the story goes, the history of software development before the 1990s involved a <em>waterfall</em> development processes. In these processes, software developers would work with clients and customers to fully define requirements for software, plan the whole thing out, and deliver final software months or years later.</p>
+<p>When the application was complete, it was hurled over the metaphorical wall from Development to Operations. IT Administrators in the Ops department would figure out the hardware and networking requirements, get it running, and keep it up.</p>
+<p>Throughout the 1990s, software developers observed that delivering software in small units, quickly collecting feedback, and iterating was a more effective model.</p>
+<p>In 2001, the <a href="https://agilemanifesto.org/"><em>Manifesto for Agile Software Development</em></a> was published, giving a name to this philosophy of software development. Agile development basically ate the world and basically all software is developed using some form of Agile these days. These days, Agile work styles have extended far beyond software into other domains as well.</p>
+<p>There are dozens of Agile software development frameworks you might’ve heard of like Scrum, Kanban, Extreme Programming, and many, many more. One commonality of these frameworks were really focused on <em>software development</em>. What happened once the software was written?</p>
+<p>The old pattern clearly wouldn’t work. If you were doing new deployments multiple times a week – or even a day – you needed a complementary process to get that software deployed and into production.</p>
+<p><em>DevOps</em> arose as this discipline – a way for Dev and Ops to better collaborate on the process that would take software from development intor production. It took a little while for the field to be formalized, and the term DevOps came into common usage around 2010.</p>
 </section>
-<section id="those-who-do-devops" class="level2">
-<h2 class="anchored" data-anchor-id="those-who-do-devops">Those who do DevOps</h2>
-<p>Throughout this book, I’ll use two different terms – and though they may sound similar, I mean very different things by them.</p>
-<p><strong>DevOps</strong> refers to the <em>knowledge, practices, and tools</em> that make it easier, safer, and faster to put work into production. So if you’re a software developer (and as a data scientist, you are) you need to be thinking about DevOps.</p>
-<p>Most organizations also have a set of <em>people and roles</em> who have the permission and responsibility for managing the servers and computers at your organization. I’m going to refer to this group as <strong>IT/Admins</strong>. Their names vary widely by organization – they might be named Information Technology (IT), SysAdmin, Site Reliability Engineering (SRE), or DevOps.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
-<p>Depending on what you’re trying to accomplish, the relevant IT/Admins may change. For example, if you’re trying to get access to a particular database, the relevant IT/Admins may be a completely different group of people than if you’re trying to procure a new server.</p>
-<p>Fundamentally, DevOps is about creating good patterns for people to collaborate on developing and deploying software. As a data scientist, you’re on the Dev side of the house, and so a huge part of making DevOps work at your organization is about finding some Ops counterparts with whom you can develop a successful collaboration. There are many different organizational structures that support collaboration between data scientists and IT/Admins.</p>
-<p>However, I will point out three patterns that are almost always red flags – mostly because they make it hard to develop relationships that can sustain the kind of collaboration DevOps neccesitates. If you find yourself in these situations, you’re not doomed – you can still get things done. But progress is likely to be slow.</p>
+<section id="processes-and-people" class="level2">
+<h2 class="anchored" data-anchor-id="processes-and-people">Processes and People</h2>
+<p>Throughout this book, <em>DevOps</em> refers to the <em>knowledge, practices, and tools</em> that make it easier, safer, and faster to put work into production. So, if you’re a software developer (and as a data scientist, you are) you need to be thinking about DevOps.</p>
+<p>Most organizations also have a set of <em>people and roles</em> who have the permission and responsibility for managing the servers and software at your organization. Their titles vary widely by organization – they might be named Information Technology (IT), SysAdmin, Site Reliability Engineering (SRE), or DevOps.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>For the sake of simplicity, I’m going to use the term <em>IT/Admin</em> to refer to these people and teams throughout this book.</p>
+<p>Fundamentally, DevOps is about creating good patterns for people to collaborate on developing and deploying software and those patterns vary by organization. That means that DevOps can and should be adapted to your organization.</p>
+<p>As a data scientist, you are the Dev, and so a huge part of making DevOps work for you is finding some IT/Admin counterparts with whom you can develop a successful collaboration. In some cases that will be easier than others. Here are three patterns that are almost always red flags – mostly because they make it hard to develop relationships that can sustain the kind of collaboration DevOps necessitates.</p>
 <ol type="1">
-<li><p>At some very large organizations, IT/Admin functions that are split into small atomic units like security, databases, networking, storage, procurement, cloud, and more. This is useful for keeping the scope-of-work manageable for the people in that group (and often results in super deep expertise within the group), but also means that you’ll need to bring people together from disparate teams to actually get anything done. And even when you find the person who can help you with one task, they’re probably not the right person to help you with anything else and they may not even know who is.</p></li>
-<li><p>Some organizations have chosen to outsource their IT/Admin functions. This isn’t a problem per-se – the people who work for outsourced IT/Admin companies are often very competent, but it does indicate a lack of commitment to the Ops half of DevOps internally. The main issues in this case tend to be logistical. Many outsourced IT/Admin teams are often in India, so it can be hard to find meeting times with American and European teams. Additionally, and I’m not quite sure why, but turnover on projects and systems tends to be very high among outsourced IT/Admin organizations. That means it can be really hard to find anyone who’s an expert on a particular system – or to be able to go back to them once you’ve found them.</p></li>
-<li><p>At some very small organizations, there isn’t yet an IT/Admin function. And at others, the IT/Admins are preoccupied with other tasks and don’t have the capacity to help the data science team.This isn’t a tragedy, but it probably means you’re about to become your own IT/Admin. Luckily, you’ve picked up this book, so you’re in the right place.</p></li>
+<li><p>At some large organizations, IT/Admin functions are split into small atomic units like security, databases, networking, storage, procurement, cloud, and more. This is useful for keeping the scope-of-work manageable for the people in that group – and often results in super deep technical expertise – but also means that it can be slow to get anything done because you’ll need to bring people together from disparate teams to actually get anything done.</p></li>
+<li><p>Some organizations have chosen to outsource their IT/Admin functions. While the individuals in those outsourced teams are often quite competent, building relationships can be difficult. Outsourced IT/Admin teams are often in India, so it can be hard to find meeting times with American and European teams. Additionally, turnover on projects and systems tends to be high at outsourced IT/Admin organizations. That means that institutional knowledge tends to be thin and relationships can’t be relied on long term.</p></li>
+<li><p>Some organizations, especially small or new ones, there isn’t an IT/Admin function. At others, the IT/Admins are preoccupied with other tasks and don’t have the capacity to help the data science team. This isn’t a tragedy, but it probably means you’re going to have to become the IT/Admin if you want to get anything done.</p></li>
 </ol>
-<p>Whether your organization has a IT/Admin setup that facilitates DevOps best practices or not, hopefully this book can help you take the first steps towards making your path to production smoother and simpler.</p>
+<p>Whether your organization has an IT/Admin setup that facilitates DevOps best practices or not, hopefully this book can help you take the first steps towards making your path to production smoother and simpler.</p>
 </section>
-<section id="whats-in-this-book" class="level2">
-<h2 class="anchored" data-anchor-id="whats-in-this-book">What’s in this book?</h2>
-<p>My hope for this book is twofold.</p>
-<p>First, I’d like to share some patterns.</p>
-<p>DevOps is a well-developed field of its own right. However, a simple 1-1 transposition of DevOps practices would be a mistake. Over the course of engaging with so many organizations at RStudio, I’ve observed some particular patterns, borrowed from DevOps, that work particularly well to grease the path to production for data scientists.</p>
-<p>Hopefully, by the time you’re done with this book, you’ll have a pretty good mental model of some patterns and principles you can apply in your own work to make deployment more reliable. That’s what’s in the first section of this book.</p>
-<p>Second, I want to equip you with some technical knowledge.</p>
-<p>IT administration is an older field that DevOps or data science, full of arcane language and technologies. My hope in this book is to equip you with the vocabulary to talk to the IT/Admins at your organization and the (beginning of) skills you’ll need if it turns out that you need to DIY a lot of what you’re doing.</p>
-<p>The second section is designed for data scientists who have to interact with IT/Admins. We’ll get into things that you probably shouldn’t manage yourself, but where it’s helpful to have a working knowledge of what particular technologies are and how they work. My hope is that reading this section will help you plan ahead for how you want to work with the IT/Admins at your organization, including the questions you’ll need to ask along the way.</p>
-<p>The final section, is the hands-on section for anyone who’s administering data science for themselves. This section is designed to equip you with some language and tools to get started administering data science in production.</p>
-<hr>
-<p>Chapter List:</p>
-<p><strong>Section 1: DevOps for DS</strong></p>
-<ol type="1">
-<li>Code Promotion</li>
-<li>Environments as Code</li>
-<li>Project Components</li>
-<li>Logging and Monitoring</li>
-<li>Docker for DS</li>
-</ol>
-<p><strong>Section 2: DIY DS Workbench</strong></p>
-<table class="table">
-<colgroup>
-<col style="width: 8%">
-<col style="width: 44%">
-<col style="width: 46%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Number</th>
-<th>Explain</th>
-<th>Lab</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>1</td>
-<td>Cloud</td>
-<td>AWS Console + Get Instance</td>
-</tr>
-<tr class="even">
-<td>2</td>
-<td>Command Line + SSH</td>
-<td>SSH into server</td>
-</tr>
-<tr class="odd">
-<td>3</td>
-<td>Linux SysAdmin</td>
-<td>Install R, Py, RS, JH</td>
-</tr>
-<tr class="even">
-<td>4</td>
-<td>Networking, DNS, SSL</td>
-<td>URL, SSL</td>
-</tr>
-<tr class="odd">
-<td>5</td>
-<td>How servers work + Choosing the right one</td>
-<td>Take down instance + attach to a bigger one</td>
-</tr>
-</tbody>
-</table>
-<p>TODO: Do I need a chapter on standing up + connecting to a database?</p>
-<p><strong>Section 3: Steps not Taken</strong></p>
-<ol type="1">
-<li>Code Promotion for DevOps, Dev/Test/Prod, Docker</li>
-<li>Better Networking (Proxies, Bastion)/Offline</li>
-<li>Auth Integrations</li>
-<li>Scaling your servers</li>
-</ol>
+<section id="about-this-book" class="level2">
+<h2 class="anchored" data-anchor-id="about-this-book">About this book</h2>
+<p>Over the course of engaging with so many organizations, I’ve seen which patterns work to grease the path to production for data scientists and which ones tend to impede it.</p>
+<p>Many of those patterns are <em>inspired</em> by traditional DevOps, but they’re not identical because of differences between pure software development and data science (more on that in <span class="quarto-unresolved-ref">?sec-1-intro</span>).</p>
+<p>The first goal of this book is to equip you with mental models you can apply in your own work and your own organization to create data science projects that are easier to take to production.</p>
+<p>The second goal of this book is to give you some background on relevant IT/Admin knowledge.</p>
+<p>IT Administration is an older field than DevOps or data science, and it’s full of arcane language and technologies. This book will equip you with the vocabulary to talk to the IT/Admins at your organization and some basic skills of how to do IT/Admin tasks yourself.</p>
+<p>The book is divided up into four sections.</p>
+<p><a href="@sec-1-intro">Section 1</a> is about data science best practices that can make it easy to take your R and Python work into production.</p>
+<p><a href="@sec-2-intro">Section 2</a> is an introduction to the tools IT/Admins use in their work like the command line, bash, and Docker.</p>
+<p><a href="@sec-3-intro">Section 3</a> is a walkthrough of basic concepts in IT Administration that will get you to the point of being able to host and manage your own small server.</p>
+<p><a href="@sec-4-intro">Section 4</a> is about how all of what you learned in Section 3 changes when you go to enterprise scale.</p>
+<section id="comprehension-questions" class="level3">
+<h3 class="anchored" data-anchor-id="comprehension-questions">Comprehension Questions</h3>
+<p>Each chapter in this book includes comprehension questions. As you get to the end of the chapter, take a moment to consider these questions. If you feel comfortable answering them, you’ve probably understood the content of the chapter pretty well.</p>
+<p>Alternatively, feel free to jump ahead to them as you’re reading the chapter. If you can already answer them all, you can probably skip that chapter’s content.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Mental Models + Mental Maps
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Throughout the book, I’ll talk a lot about building a mental model of different concepts.</p>
+<p>A mental map is way to represent mental models.</p>
+<p>In a mental map, you draw each of the nouns as nodes and connect them with arrows that are labelled to explain the relationship.</p>
+<p>Mental maps are a great way to test your mental models, so I’ll suggest them as comprehension questions in many chapters.</p>
+<p>Here’s an example about this book:</p>
+<div class="cell" data-eval="true">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">graph LR
+    A[I] --&gt;|Wrote| B[DO4DS]
+    C[You] --&gt; |Are Reading| B
+    B --&gt; |Includes| D[Exercises]
+    D --&gt; |Some Are| E[Mind Maps]
+</pre>
+</div>
+</div>
+</div>
+</div>
+<p>Note how every node is a noun, and the edges (labels on the arrows) are verbs. It’s pretty simple! But writing down the relationships between entities like this is a <em>great</em> check on understanding.</p>
+</div>
+</div>
+</section>
+<section id="labs" class="level3">
+<h3 class="anchored" data-anchor-id="labs">Labs</h3>
+<p>Many chapters also contain labs. The idea of these labs is to give you hands-on experience with the concepts at hand.</p>
+<p>These labs all tie together. If you follow the labs in this book, you’ll build up a reasonably complete data science platform that includes a place for you to work, a way to store data, and a deployment environment.</p>
+<p><a href="https://allisonhorst.github.io/palmerpenguins/">Palmer Penguins</a> is a public dataset meant for demonstrating data exploration and visualization. We’re going to pretend we care deeply about the relationship between penguin bill length and mass. We’re going to build up an entire data science environment dedicated to exploring that relationship.</p>
+<p>The front end of this environment is going to be a website that contains an app that allows you to get predictions from a machine learning model of a penguin’s mass based on bill length and other features. We’re also going to include pages dedicated to exploratory data analysis and model building on the website.</p>
+<p>On the backend, we’re going to build a data science workbench on an AWS EC2 instance where we can do this work. It will include RStudio Server and JupyterHub for working. It will additionally host the machine learning model as an API and the Shiny app that appears on the website.</p>
+<p>The whole thing will get auto-deployed from a git repo using GitHub Actions.</p>
+<p>From an architectural perspective, it’ll look something like this:</p>
+<p><img src="intro-images/lab-arch.png" class="img-fluid"></p>
+<div class="cell" data-eval="true">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">graph LR
+    subgraph Palmer Penguins Site
+        A["EDA 
+        R Quarto"] 
+        B["Model Build 
+        Jupyter"] 
+        C["Model Explorer 
+        PyShiny"]
+    end
+    subgraph Git Repo
+        D[Repo] --&gt; |GHA| A
+        D --&gt; |GHA| B
+    end
+    subgraph AWS
+        subgraph EC2
+            F[Shiny]
+            G(RStudio Server)
+            H(Jupyter Hub)
+            I[FastAPI]
+            J[DuckDB]
+            J --&gt; I
+            F --&gt; C
+        end
+        subgraph S3
+            E[Model]
+        end
+    end
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+<p>If you’re interested in exactly which pieces get completed in each chapter, check out <a href="append/lab-map.html">Appendix&nbsp;<span>B</span></a>.</p>
 
 
+</section>
 </section>
 <section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn1"><p>I think a lot of DevOps experts would argue that you’re doing DevOps wrong if you have a standalone DevOps team, but some companies have them.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>I think a lot of DevOps experts would argue that you’re doing DevOps wrong if you have a standalone DevOps team.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 
@@ -427,9 +544,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -441,7 +572,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -477,24 +625,128 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
 });
 </script>
@@ -505,7 +757,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../chapters/sec1/sec-intro.html" class="pagination-link">
+      <a href="../chapters/sec1/1-0-sec-intro.html" class="pagination-link">
         <span class="nav-page-text">DevOps Lessons for Data Science</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
@@ -514,6 +766,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">Copyright 2022, Alex K Gold</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">

@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Alex K Gold">
 
-<title>DevOps for Data Science</title>
+<title>DevOps for Data Science - 6&nbsp; The Terminal</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,23 +23,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./chapters/intro.html" rel="next">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../chapters/sec2/2-2-ssh.html" rel="next">
+<link href="../../chapters/sec2/2-0-sec-intro.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -69,6 +69,9 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-BTSMMRMH08', { 'anonymize_ip': true});
 </script>
+<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 </head>
@@ -83,7 +86,7 @@ gtag('config', 'G-BTSMMRMH08', { 'anonymize_ip': true});
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Welcome!</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../chapters/sec2/2-0-sec-intro.html">IT/Admin Tools</a></li><li class="breadcrumb-item"><a href="../../chapters/sec2/2-1-terminal.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">The Terminal</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -98,7 +101,7 @@ gtag('config', 'G-BTSMMRMH08', { 'anonymize_ip': true});
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">DevOps for Data Science</a> 
+      <a href="../../">DevOps for Data Science</a> 
         <div class="sidebar-tools-main">
     <a href="https://github.com/akgold/do4ds" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
     <div class="dropdown">
@@ -130,19 +133,19 @@ gtag('config', 'G-BTSMMRMH08', { 'anonymize_ip': true});
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Welcome!</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../../chapters/intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./chapters/sec1/1-0-sec-intro.html" class="sidebar-item-text sidebar-link">
+            <a href="../../chapters/sec1/1-0-sec-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">DevOps Lessons for Data Science</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -151,31 +154,31 @@ gtag('config', 'G-BTSMMRMH08', { 'anonymize_ip': true});
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/sec1/1-1-code-promotion.html" class="sidebar-item-text sidebar-link">
+  <a href="../../chapters/sec1/1-1-code-promotion.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Code promotion and integration</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/sec1/1-2-env-as-code.html" class="sidebar-item-text sidebar-link">
+  <a href="../../chapters/sec1/1-2-env-as-code.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Environments as Code</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/sec1/1-3-data-arch.html" class="sidebar-item-text sidebar-link">
+  <a href="../../chapters/sec1/1-3-data-arch.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data Pipeline Architecture</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/sec1/1-4-apis.html" class="sidebar-item-text sidebar-link">
+  <a href="../../chapters/sec1/1-4-apis.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Designing Your Application Layers</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/sec1/1-5-monitor-log.html" class="sidebar-item-text sidebar-link">
+  <a href="../../chapters/sec1/1-5-monitor-log.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Logging and Monitoring</span></span></a>
   </div>
 </li>
@@ -183,7 +186,7 @@ gtag('config', 'G-BTSMMRMH08', { 'anonymize_ip': true});
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./chapters/sec2/2-0-sec-intro.html" class="sidebar-item-text sidebar-link">
+            <a href="../../chapters/sec2/2-0-sec-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">IT/Admin Tools</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -192,25 +195,25 @@ gtag('config', 'G-BTSMMRMH08', { 'anonymize_ip': true});
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/sec2/2-1-terminal.html" class="sidebar-item-text sidebar-link">
+  <a href="../../chapters/sec2/2-1-terminal.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">The Terminal</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/sec2/2-2-ssh.html" class="sidebar-item-text sidebar-link">
+  <a href="../../chapters/sec2/2-2-ssh.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Connecting Securely with SSH</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/sec2/2-3-cmd-line.html" class="sidebar-item-text sidebar-link">
+  <a href="../../chapters/sec2/2-3-cmd-line.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Getting comfortable on the Command Line</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/sec2/2-4-docker.html" class="sidebar-item-text sidebar-link">
+  <a href="../../chapters/sec2/2-4-docker.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Demystifying Docker</span></span></a>
   </div>
 </li>
@@ -218,7 +221,7 @@ gtag('config', 'G-BTSMMRMH08', { 'anonymize_ip': true});
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./chapters/sec3/3-0-sec-intro.html" class="sidebar-item-text sidebar-link">
+            <a href="../../chapters/sec3/3-0-sec-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">IT/Admin for Data Science</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -227,37 +230,37 @@ gtag('config', 'G-BTSMMRMH08', { 'anonymize_ip': true});
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/sec3/3-1-cloud.html" class="sidebar-item-text sidebar-link">
+  <a href="../../chapters/sec3/3-1-cloud.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Getting Started with the Cloud</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/sec3/3-2-linux-admin.html" class="sidebar-item-text sidebar-link">
+  <a href="../../chapters/sec3/3-2-linux-admin.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Basic Linux SysAdmin</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/sec3/3-3-networking.html" class="sidebar-item-text sidebar-link">
+  <a href="../../chapters/sec3/3-3-networking.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Intro to Computer Networks</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/sec3/3-4-dns.html" class="sidebar-item-text sidebar-link">
+  <a href="../../chapters/sec3/3-4-dns.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">DNS allows for human-readable addresses</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/sec3/3-5-ssl.html" class="sidebar-item-text sidebar-link">
+  <a href="../../chapters/sec3/3-5-ssl.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">You should use SSL/HTTPS</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/sec3/3-6-servers.html" class="sidebar-item-text sidebar-link">
+  <a href="../../chapters/sec3/3-6-servers.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Choosing the right server for you</span></span></a>
   </div>
 </li>
@@ -265,7 +268,7 @@ gtag('config', 'G-BTSMMRMH08', { 'anonymize_ip': true});
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./chapters/sec4/4-0-sec-intro.html" class="sidebar-item-text sidebar-link">
+            <a href="../../chapters/sec4/4-0-sec-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Making it Enterprise-Grade</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -274,25 +277,25 @@ gtag('config', 'G-BTSMMRMH08', { 'anonymize_ip': true});
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/sec4/4-1-os-ds-in-ent.html" class="sidebar-item-text sidebar-link">
+  <a href="../../chapters/sec4/4-1-os-ds-in-ent.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Open Source Data Science in the Enterprise</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/sec4/4-2-ent-networks.html" class="sidebar-item-text sidebar-link">
+  <a href="../../chapters/sec4/4-2-ent-networks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Enterprise Networking</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/sec4/4-3-auth.html" class="sidebar-item-text sidebar-link">
+  <a href="../../chapters/sec4/4-3-auth.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Auth in Enterprise</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/sec4/4-4-ent-servers.html" class="sidebar-item-text sidebar-link">
+  <a href="../../chapters/sec4/4-4-ent-servers.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Enterprise Server Management</span></span></a>
   </div>
 </li>
@@ -309,13 +312,13 @@ gtag('config', 'G-BTSMMRMH08', { 'anonymize_ip': true});
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/append/auth.html" class="sidebar-item-text sidebar-link">
+  <a href="../../chapters/append/auth.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Auth Technologies</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/append/lab-map.html" class="sidebar-item-text sidebar-link">
+  <a href="../../chapters/append/lab-map.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Lab Map</span></span></a>
   </div>
 </li>
@@ -331,34 +334,25 @@ gtag('config', 'G-BTSMMRMH08', { 'anonymize_ip': true});
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#welcome" id="toc-welcome" class="nav-link active" data-scroll-target="#welcome">Welcome!</a>
-  <ul class="collapse">
-  <li><a href="#software-information-and-conventions" id="toc-software-information-and-conventions" class="nav-link" data-scroll-target="#software-information-and-conventions">Software information and conventions</a></li>
-  <li><a href="#about-the-author" id="toc-about-the-author" class="nav-link" data-scroll-target="#about-the-author">About the Author</a></li>
-  <li><a href="#acknowledgments" id="toc-acknowledgments" class="nav-link" data-scroll-target="#acknowledgments">Acknowledgments</a></li>
-  <li><a href="#color-palette" id="toc-color-palette" class="nav-link" data-scroll-target="#color-palette">Color palette</a></li>
-  </ul></li>
+  <li><a href="#what-makes-up-the-command-line" id="toc-what-makes-up-the-command-line" class="nav-link active" data-scroll-target="#what-makes-up-the-command-line"><span class="header-section-number">6.1</span> What makes up the command line?</a></li>
+  <li><a href="#choose-your-terminal" id="toc-choose-your-terminal" class="nav-link" data-scroll-target="#choose-your-terminal"><span class="header-section-number">6.2</span> Choose your terminal</a></li>
+  <li><a href="#choosing-and-configuring-your-shell" id="toc-choosing-and-configuring-your-shell" class="nav-link" data-scroll-target="#choosing-and-configuring-your-shell"><span class="header-section-number">6.3</span> Choosing and configuring your shell</a></li>
+  <li><a href="#comprehension-questions" id="toc-comprehension-questions" class="nav-link" data-scroll-target="#comprehension-questions"><span class="header-section-number">6.4</span> Comprehension Questions</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/akgold/do4ds/edit/main/index.qmd" class="toc-action">Edit this page</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/akgold/do4ds/edit/main/chapters/sec2/2-1-terminal.qmd" class="toc-action">Edit this page</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">DevOps for Data Science</h1>
+<h1 class="title"><span id="sec-terminal" class="quarto-section-identifier"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">The Terminal</span></span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Alex K Gold </p>
-          </div>
-  </div>
     
   
     
@@ -367,52 +361,100 @@ gtag('config', 'G-BTSMMRMH08', { 'anonymize_ip': true});
 
 </header>
 
-<section id="welcome" class="level1 unnumbered">
-<h1 class="unnumbered">Welcome!</h1>
-<p>This is the website for the book <em>DevOps for Data Science</em>, currently in draft form.</p>
-<div class="callout callout-style-default callout-warning callout-titled">
+<p>If you want to adjust the system settings on your laptop or navigate from directory to directory, you can click through a file tree or open up your preferences pane.</p>
+<p>Usually, there are no graphical user interafaces (GUIs) at all. On a server, interaction is via the command line – an all-text interface where you type commands.</p>
+<p>Once you feel comfortable using the command line on a server, you’ll probably find that there are many things that will get easier for you locally as well!</p>
+<p>This chapter is all about the terminal itself – by the end of the chapter, you’ll understand what the terminal is, how to get it open on your machine, and how to customize it to your liking.</p>
+<section id="what-makes-up-the-command-line" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="what-makes-up-the-command-line"><span class="header-section-number">6.1</span> What makes up the command line?</h2>
+<p>It is possible to spend <em>a lot</em>of time customizing your terminal to be exactly what you like. Some might argue it wouldn’t be the best use of your time to do so.</p>
+<p>Such people are no fun, and having a terminal that’s super customized to what you like is great. Plus you get to feel like a real hacker.</p>
+<p>One of the confusing things about customizing your command line is understanding what program you’re actually interacting with and where it’s customized. So here’s a little intro.</p>
+<p>There are three programs that sit on top of each other when you interact with the command line – the terminal, the shell, and the operating system.</p>
+<p>The <em>terminal</em> is the visual program where you’ll type in commands. The terminal program you use will dictate the colors and themes available for the window, how tabs and panes work, and the keyboard shortcuts you’ll use to manage them.</p>
+<p>The <em>shell</em> is the program you’re interacting with as you’re typing in commands. It’s what matches the words you type to actual commands or programs on your system. Depending on which shell you choose, you’ll get different options for autocompletion, options for plugins for things like git, and coloring and theming of the actual text in your terminal.</p>
+<p>There is some overlap of things you can customize via the terminal vs the shell, so mix and match to your heart’s content.</p>
+<p>Lastly, the <em>operating system</em> is what actually runs the commands you’re typing in. So the set of commands available to you will differ by whether you’re using Windows or Mac or Linux.</p>
+<div class="cell" data-eval="true">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">graph LR
+    A[A Human] --&gt; |Types| B[Commands]
+    A --&gt; |Opens| E
+    E[Terminal] --&gt; |Opens| C
+    C[Shell] --&gt; |Dispatches| B
+    D[Operating System] --&gt; |Defines the set of| B
+    D[Operating System] --&gt; |Runs| B
+</pre>
+</div>
+</div>
+</div>
+</div>
+<p>In the next few sections of this chapter, we’ll get into how to set up your terminal and shell so that it looks and behaves exactly the way you want.</p>
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Warning
+Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This book is very much still a work in progress.</p>
-<p>The content is mostly here, but I am still rewriting, polishing, and rearranging.</p>
-<p>Content is likely to move from section to section and chapter to chapter.</p>
-<p>Links are likely to break.</p>
-<p>Thanks for your patience.</p>
+<p>I haven’t used a Windows machine in many years. I’ve collected some recommendations here, but I can’t personally vouch for them the way I can my Mac recommendations.</p>
 </div>
 </div>
-<p>In this book, you’ll learn about DevOps conventions, tools, and practices that can be useful to you as a data scientist. You’ll also learn how to work better with the IT/Admin team at your organization, and even how to do a little server administration of your own if you’re pressed into service.</p>
-<p>This website is (and always will be) <strong>free to use</strong>, and is licensed under the <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/us/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0</a> license.</p>
-<p>If you’d like a <strong>physical copy</strong> of the book, they will be available once it’s finished!</p>
-<section id="software-information-and-conventions" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="software-information-and-conventions">Software information and conventions</h2>
-<p>I used the <strong>knitr</strong> package <span class="citation" data-cites="xie2015">[@xie2015]</span> and the <strong>quarto</strong> package <span class="citation" data-cites="quarto">[@quarto]</span> to compile my book.</p>
-<p>Package names are in bold text (e.g., <strong>rmarkdown</strong>), and inline code and filenames are formatted in a typewriter font (e.g., <code>knitr::knit('foo.Rmd')</code>). Function names are followed by parentheses (e.g., <code>bookdown::render_book()</code>).</p>
 </section>
-<section id="about-the-author" class="level2">
-<h2 class="anchored" data-anchor-id="about-the-author">About the Author</h2>
-<p>Alex Gold is the Director of Solutions Engineering at <a href="posit.co">Posit</a>, formerly RStudio.</p>
-<p>The Solutions Engineering team works with Posit’s customers to help them deploy, configure, and use Posit’s professional software and open source tooling in R and Python.</p>
-<p>In his free time, he enjoys landscaping, handstands, and Tai Chi.</p>
-<p>He occasionally blogs about data, management, and leadership at <a href="http://alexkgold.space">alexkgold.space</a>.</p>
+<section id="choose-your-terminal" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="choose-your-terminal"><span class="header-section-number">6.2</span> Choose your terminal</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">MacOS</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Windows</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>If you’re using a Mac, you can use the built-in terminal app, conveniently called <code>Terminal</code>. It’s fine.</p>
+<p>If you’re going to be using your terminal more than occasionally, I’d recommend downloading and switching to the the free <a href="https://iterm2.com/">iTerm2</a>, which adds a bunch of niceties like better theming and multiple tabs.</p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p>If you’re using Windows, there are a variety of alternative terminals you can try, but the built-in terminal is the favorite of many users. Experiment if you like, but feel free to stick with the default.</p>
+</div>
+</div>
+</div>
 </section>
-<section id="acknowledgments" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="acknowledgments">Acknowledgments</h2>
-<p>A lot of people are helping me write this book.</p>
-<p>This book is published to the web using GitHub Actions from <a href="https://github.com/orchid00/actions_sandbox">rOpenSci</a>.</p>
+<section id="choosing-and-configuring-your-shell" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="choosing-and-configuring-your-shell"><span class="header-section-number">6.3</span> Choosing and configuring your shell</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">MacOS</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Windows</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<p>The default shell for MacOS (and Linux) is called bash. It’s pretty great shell. There’s nothing to really <em>replace</em> bash, but there are <em>bash alternatives</em> that extend bash in various ways.</p>
+<p>The most popular bash alternatives include zsh, Ksh, and Fish. If you don’t already have a favorite, I recommend zsh.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>It has a few advantages over bash out of the box, like better autocompletion. It also has a huge ecosystem of themes and plugins that can make your shell way prettier and more functional. There are plugins that do everything from displaying your git status on the command line to controlling your Spotify playlist.</p>
+<p>There are two popular plugin managers for zsh – OhMyZsh and Prezto. I prefer and recommend Prezto, but the choice is really up to you.</p>
+<p>I’m not going to go through the steps of installing these tools – there are numerous online walkthroughs and guides that you can google.</p>
+<p>But it is a little confusing to know what to customize where, so here’s the high level overview if you’ve installed iTerm2, zsh, and prezto. You’ll customize the look of the window and the tab behavior in the iTerm2 preferences and customize the text theme and plugins via prezto. You can mostly skip any customization of zsh in the <code>.zshrc</code> since you’ll be doing that in Prezto.</p>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p>Windows comes with two shells built in, the Command shell (<code>cmd</code>) and the PowerShell.</p>
+<p>The command shell is older and has been superseded by PowerShell. If you’re just getting started, you absolutely should just work with PowerShell. If you’ve been using Command shell on a Windows machine for a long time, most Command shell command work in PowerShell, so it may be worth switching over.</p>
+<p>Once you’ve installed PowerShell, many people like customizing it with Oh My Posh.</p>
+</div>
+</div>
+</div>
 </section>
-<section id="color-palette" class="level2">
-<h2 class="anchored" data-anchor-id="color-palette">Color palette</h2>
-<p>Tea Green: CAFFDO Steel Blue: 3E7CB1 Kombu Green: 273c2c Bright Maroon: B33951 Sandy Brown: FCAA67</p>
+<section id="comprehension-questions" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="comprehension-questions"><span class="header-section-number">6.4</span> Comprehension Questions</h2>
+<ol type="1">
+<li>Draw a mental map that includes the following: terminal, shell, operating system, my laptop</li>
+</ol>
 
 
 </section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>zsh is pronounced by just speaking the letters aloud. Some people say it <em>zeesh</em>, but they’re not writing this book, are they?<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
 </section>
 
 </main> <!-- /main -->
@@ -651,10 +693,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../../chapters/sec2/2-0-sec-intro.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">IT/Admin Tools</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./chapters/intro.html" class="pagination-link">
-        <span class="nav-page-text">Introduction</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../chapters/sec2/2-2-ssh.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Connecting Securely with SSH</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -668,7 +713,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">
-    <a class="nav-link active" href="https://github.com/akgold/do4ds" aria-current="page">
+    <a class="nav-link" href="https://github.com/akgold/do4ds">
       <i class="bi bi-github" role="img">
 </i> 
     </a>
